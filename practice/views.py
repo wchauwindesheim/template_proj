@@ -80,7 +80,32 @@ class TagView(TemplateView):
             {'firstname': 'John', 'lastname': 'Lennon'},
             {'firstname': 'George', 'lastname': 'Harrison'},
             {'firstname': 'Ringo', 'lastname': 'Starr'},
-        ]    
-        return context
+        ]
 
-     
+        # for for loops
+        context['inventory'] = {
+            'gloves': 0,
+            'hats': 51,
+            'scarves': 2,
+            'socks': 13
+        }
+
+        context['fruits'] = ['Apples', 'Bananas', 'Pears', 'Grapes', 'Oranges']
+
+        # for empty
+        context['joke_list'] = []
+
+        # for ifchanged
+        context['foods'] = [
+            {'name': 'Apple', 'category': 'Fruit'},
+            {'name': 'Banana', 'category': 'Fruit'},
+            {'name': 'Grape', 'category': 'Fruit'},
+            {'name': 'Hamburger', 'category': 'Meat'},
+            {'name': 'Pepper', 'category': 'Vegetable'},
+            {'name': 'Corn', 'category': 'Vegetable'}
+        ]
+
+        # for repeat custom tag
+        context['company'] = 'Webucator'
+        
+        return context
